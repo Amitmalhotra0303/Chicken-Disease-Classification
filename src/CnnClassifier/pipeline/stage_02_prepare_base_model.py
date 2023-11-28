@@ -2,6 +2,9 @@ from CnnClassifier.config.configuration import ConfigurationManager
 from CnnClassifier.components.prepare_base_model import PrepareBaseModel
 from CnnClassifier import logger
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 STAGE_NAME = "PREPARE BASE MODEL"
 
 class PrepareBaseModelTrainingPipeline:
